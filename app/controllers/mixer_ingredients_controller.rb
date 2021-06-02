@@ -1,0 +1,2 @@
+class MixerIngredientsController < ApplicationController
+end
