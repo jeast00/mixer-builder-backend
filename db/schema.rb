@@ -10,6 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_06_02_121015) do
+
+  create_table "mixer_ingredients", force: :cascade do |t|
+    t.string "ingredient_1"
+    t.string "ingredient_2"
+    t.string "ingredient_3"
+    t.string "ingredient_4"
+    t.string "ingredient_5"
+    t.integer "mixer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mixer_id"], name: "index_mixer_ingredients_on_mixer_id"
+  end
+
+  create_table "mixer_instructions", force: :cascade do |t|
+    t.text "instructions"
+    t.integer "mixer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mixer_id"], name: "index_mixer_instructions_on_mixer_id"
+  end
+
+  create_table "mixers", force: :cascade do |t|
+    t.string "drink_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
