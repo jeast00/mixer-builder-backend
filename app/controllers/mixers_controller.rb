@@ -9,4 +9,11 @@ class MixersController < ApplicationController
         render json: mixer
     end
 
+
+    private
+
+    def mixer_params
+        params.require(:mixer).permit(:drink_name)
+    end
+
 end
