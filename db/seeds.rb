@@ -8,10 +8,8 @@
 
 Mixer.destroy_all
 MixerIngredient.destroy_all
-MixerInstruction.destroy_all
 
 mixer_1 = Mixer.create(drink_name: "Screwdriver")
 
-mixer_instructions_1 = MixerInstruction.create(instructions: "Pour ingredients into a rocks glass on ice and serve", mixer: mixer_1)
 
-MixerIngredient.create(ingredient_1: "Rocks Glass", ingredient_2: "Vodka", ingredient_3: "Orange Juice", ingredient_4: "", ingredient_5: "", mixer: mixer_1)
+MixerIngredient.create(ingredient_1: "Rocks Glass", ingredient_2: "Vodka", ingredient_3: "Orange Juice", ingredient_4: "", ingredient_5: "", drink_instructions: "Pour ingredients into a rocks glass on ice and serve", mixer: mixer_1)

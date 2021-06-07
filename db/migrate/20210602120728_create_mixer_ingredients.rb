@@ -6,6 +6,7 @@ class CreateMixerIngredients < ActiveRecord::Migration[6.1]
       t.string :ingredient_3
       t.string :ingredient_4
       t.string :ingredient_5
+      t.text :drink_instructions
       t.belongs_to :mixer, null: false, foreign_key: false
 
       t.timestamps
