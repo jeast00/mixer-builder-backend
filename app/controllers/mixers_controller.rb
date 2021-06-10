@@ -6,7 +6,7 @@ class MixersController < ApplicationController
 
     def show
         mixer = Mixer.find_by_id(params[:id])
-        render json: mixer
+        render json: MixerSerializer.new(mixer)
     end
 
 
