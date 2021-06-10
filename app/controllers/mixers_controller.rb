@@ -9,6 +9,10 @@ class MixersController < ApplicationController
         render json: MixerSerializer.new(mixer)
     end
 
+    def create
+        
+    end
+
 
     private
 
