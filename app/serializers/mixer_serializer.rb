@@ -1,4 +1,5 @@
 class MixerSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id, :drink_name, :mixer_ingredients
+  attributes :id, :drink_name
+  has_many :mixer_ingredients
 end

@@ -1,7 +1,7 @@
 class MixerIngredientsController < ApplicationController
 
     def index
-        render json: MixerIngredient.all
+        render json: MixerIngredientSerializer.new(MixerIngredient.all)
     end
 
     private

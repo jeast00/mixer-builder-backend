@@ -1,7 +1,7 @@
 class MixersController < ApplicationController
 
     def index
-        render json: Mixer.all.map { |mixer| MixerSerializer.new(mixer) }
+        render json: MixerSerializer.new(Mixer.all)
     end
 
     def show
