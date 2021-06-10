@@ -4,6 +4,12 @@ class MixerIngredientsController < ApplicationController
         render json: MixerIngredientSerializer.new(MixerIngredient.all)
     end
 
+    def show
+        mixer_ingredients = MixerIngredient.find_by_id(params[:id])
+        render json: MixerIngredientSerializer.new(mixer_ingredients)
+    end
+
+
     private
 
     def mixer_ingredient_params
