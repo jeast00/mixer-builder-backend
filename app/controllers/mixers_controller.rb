@@ -10,7 +10,7 @@ class MixersController < ApplicationController
     end
 
     def create
-        
+        #byebug
     end
 
 
